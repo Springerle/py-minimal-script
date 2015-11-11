@@ -1,0 +1,14 @@
+{
+    "full_name": "Joe Schmoe"
+  , "github_username": "{{ (cookiecutter.full_name[0] + cookiecutter.full_name.split(None, 1)[1]) | lower | replace(' ', '') }}"
+  , "email": "{{ cookiecutter.github_username }}@example.com"
+  , "project_name": "New Script"
+  , "repo_name": "{{ cookiecutter.project_name | lower | replace(' ', '-') }}"
+  , "module_name": "{{ cookiecutter.repo_name | replace('-', '_') }}"
+  , "version": "0.1.0"
+  , "year": "2015"
+  , "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+  , "url": "{{ cookiecutter.github_url }}"
+  , "short_description": "A new Python script"
+  , "keywords": "hosted.by.github"
+}
