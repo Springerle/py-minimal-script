@@ -47,4 +47,4 @@ Apache 2.0 license by default – you have to change the ``LICENSE`` file, ``set
 and the script module to change that, after you materialized the template.
 
 * [![Project License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/Springerle/py-minimal-script/blob/master/LICENSE_MIT) for the project.
-* [![Template License](http://img.shields.io/badge/license-CC0-blue.svg)](https://github.com/Springerle/py-minimal-script/blob/master/LICENSE_CC0) for the template proper (everything in `{{cookiecutter.repo_name}}`), unless specified otherwise within the file itself.
+* [![Template License](http://img.shields.io/badge/license-CC0-blue.svg)](https://github.com/Springerle/py-minimal-script/blob/master/LICENSE_CC0) for the template proper (everything in `{{cookiecutter.repo_name}}`).
