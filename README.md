@@ -18,7 +18,7 @@ The resulting project uses
 and [invoke](https://github.com/pyinvoke/invoke/)
 for task automation, and
 [setuptools](https://bitbucket.org/pypa/setuptools)
-for building and distributing the project.
+for building and distributing the script.
 A provided [autoenv](https://github.com/kennethreitz/autoenv) script takes care
 of creating a fully boot-strapped `virtualenv` – it can also be used manually
 if you don't want to install `autoenv`.
