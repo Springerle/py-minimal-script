@@ -1,6 +1,7 @@
 # *- coding: utf-8 -*-
-# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation
-# pylint: disable=superfluous-parens, redefined-builtin, unused-import
+# pylint: disable=locally-disabled, bad-continuation
+# pylint: disable=wildcard-import, unused-import, unused-wildcard-import
+# pylint: disable=superfluous-parens, redefined-builtin
 """ Project automation for Invoke.
 """
 # Copyright (c) 2015 Jürgen Hermann
