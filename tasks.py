@@ -44,7 +44,7 @@ def clean(ctx, docs=False, venv=False, extra=''):
 
     # Add patterns based on given parameters
     venv_dirs = ['.venv']
-    patterns = ['new-project/', 'pip-selfcheck.json', '**/*~']
+    patterns = ['new-script/', 'pip-selfcheck.json', '**/*~']
     if docs:
         patterns.append('docs/_build/')
     if venv:
@@ -84,11 +84,11 @@ def test(ctx):
             ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
             ctx.run("invoke --echo --pty build check")
         else:
-            venv_bin = '.venv/new-project/bin/'
+            venv_bin = '.venv/new-script/bin/'
             ctx.run("bash -c '. .env --yes --develop && invoke build check'")
 
-        ctx.run(venv_bin + "new-project --help")
-        ctx.run(venv_bin + "new-project --version")
+        ctx.run(venv_bin + "new-script --help")
+        ctx.run(venv_bin + "new-script --version")
 
 
 namespace = Collection.from_module(sys.modules[__name__], name='')
