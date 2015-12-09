@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=locally-disabled, invalid-name
+# pylint: disable=locally-disabled, invalid-name, wrong-import-position
 """
     {{ cookiecutter.project_name }} - {{ cookiecutter.short_description }}.
 
@@ -78,6 +78,7 @@ import io
 import os
 import re
 import sys
+import json
 
 try:
     from setuptools import setup
@@ -109,7 +110,6 @@ project.update(dict(
 __all__ = ['project', 'project_root']
 if __name__ == '__main__':
     if '--metadata' in sys.argv[:2]:
-        import json
         json.dump(project, sys.stdout, default=repr, indent=4, sort_keys=True)
         sys.stdout.write('\n')
     else:

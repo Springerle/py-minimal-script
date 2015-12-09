@@ -18,16 +18,16 @@
 """
 from __future__ import absolute_import, unicode_literals, print_function
 
-__version__ = '{{ cookiecutter.version }}'
-__author__ = '{{ cookiecutter.full_name }}'
-__author_email__ = '{{ cookiecutter.email }}'
-
 import sys
 import time
 import errno
 import codecs
 import logging
 import argparse
+
+__version__ = '{{ cookiecutter.version }}'
+__author__ = '{{ cookiecutter.full_name }}'
+__author_email__ = '{{ cookiecutter.email }}'
 
 
 def setup():
@@ -67,7 +67,7 @@ def make_argparser():
 def mainloop(parser, args):
     """Implementation of this command."""
     print(repr(args))
-    for i in range(30):
+    for _ in range(30):
         sys.stdout.write('.')
         sys.stdout.flush()
         time.sleep(1)
