@@ -7,6 +7,8 @@
 
 {{ cookiecutter.short_description }}.
 
+.. contents:: **Contents**
+
 .. _setup-start:
 
 Introduction
