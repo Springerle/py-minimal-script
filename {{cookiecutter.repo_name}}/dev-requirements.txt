@@ -3,15 +3,15 @@
 #
 
 pip>=8
-invoke==0.12.2
+invoke==0.14.0
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
 
-pylint==1.5.4
-bpython==0.15
-yolk3k==0.8.8
+pylint==1.6.5
+bpython==0.16
+yolk3k==0.9
 
-twine==1.6.5
+twine==1.8.1
 
 # -r test-requirements.txt
 -r requirements.txt
