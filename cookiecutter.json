@@ -11,4 +11,5 @@
   , "url": "{{ cookiecutter.github_url }}"
   , "short_description": "A new Python script"
   , "keywords": "hosted.by.github"
+  , "use_py3": "true"
 }
