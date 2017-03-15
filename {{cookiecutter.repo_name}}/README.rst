@@ -4,18 +4,24 @@
  |Travis CI|  |Coveralls|  |GitHub Issues|  |License|
  |Development Status|  |Latest Version|  |Download format|  |Downloads|
 
-
 {{ cookiecutter.short_description }}.
 
 .. contents:: **Contents**
+
 
 .. _setup-start:
 
 Introduction
 ------------
 
+**TODO**
+
+
 Usage
 -----
+
+**TODO**
+
 
 Installation
 ------------
@@ -32,7 +38,7 @@ As a developer, to create a working directory for this project, call these comma
 
     git clone "{{ cookiecutter.github_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
-    . .env --yes --develop
+    command . .env --yes --develop  # add '--virtualenv /usr/bin/virtualenv' for Python2
     invoke build check
 
 You might also need to follow some
