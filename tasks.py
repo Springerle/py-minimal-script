@@ -83,10 +83,10 @@ def test(ctx):
             venv_bin = ''
             notify.info("Installing archetype requirements...")
             ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
-            ctx.run("invoke --echo --pty build check")
+            ctx.run("invoke --echo --pty build test check")
         else:
             venv_bin = '.venv/new-script/bin/'
-            ctx.run("bash -c '. .env --yes --develop && invoke build check'")
+            ctx.run("bash -c '. .env --yes --develop && invoke build test check'")
 
         ctx.run(venv_bin + "new-script --help")
         ctx.run(venv_bin + "new-script --version")

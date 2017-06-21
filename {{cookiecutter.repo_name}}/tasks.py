@@ -6,3 +6,6 @@
 from __future__ import absolute_import, unicode_literals
 
 from rituals.easy import *  # pylint: disable=locally-disabled, redefined-builtin
+from rituals.config import set_flat_layout
+
+set_flat_layout()
