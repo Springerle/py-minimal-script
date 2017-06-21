@@ -2,7 +2,7 @@
 ===============================
 
  |Travis CI|  |Coveralls|  |GitHub Issues|  |License|
- |Development Status|  |Latest Version|  |Download format|  |Downloads|
+ |Latest Version|  |Downloads|
 
 {{ cookiecutter.short_description }}.
 
