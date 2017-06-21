@@ -1,3 +1,4 @@
+#! /usr/bin/env python{% if cookiecutter.use_py3 == 'true' %}3{% endif %}
 # -*- coding: utf-8 -*-
 """
     {{ cookiecutter.project_name }} – {{ cookiecutter.short_description }}.
