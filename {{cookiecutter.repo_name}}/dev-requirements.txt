@@ -3,7 +3,7 @@
 #
 
 pip>=8
-invoke==0.14.0
+invoke==0.19.0
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
 
