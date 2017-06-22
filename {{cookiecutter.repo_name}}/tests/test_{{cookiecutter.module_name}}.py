@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # pylint: disable=wildcard-import, unused-wildcard-import, missing-docstring, no-self-use, bad-continuation
 """ Test «{{cookiecutter.module_name}}».
 """

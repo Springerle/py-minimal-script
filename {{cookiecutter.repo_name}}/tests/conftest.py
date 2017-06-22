@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # pylint: disable=
 """ py.test dynamic configuration.
 
