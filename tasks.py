@@ -79,15 +79,12 @@ def test(ctx):
     with pushd('new-script'):
         #assert not os.path.exists('empty-testfile'), "empty file is removed"
 
+        opts = ''
         if os.environ.get('TRAVIS', '') == 'true':
-            venv_bin = ''
-            notify.info("Installing archetype requirements...")
-            ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
-            ctx.run("invoke --echo --pty build test check")
-        else:
-            venv_bin = '.venv/new-script/bin/'
-            ctx.run("bash -c '. .env --yes --develop && invoke build test check'")
+            opts = '--echo --pty'
 
+        venv_bin = '.venv/new-script/bin/'
+        ctx.run("bash -c '. .env --yes --develop && invoke {} build test check'".format(opts))
         ctx.run(venv_bin + "new-script --help")
         ctx.run(venv_bin + "new-script --version")
 
