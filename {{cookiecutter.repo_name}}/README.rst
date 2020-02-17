@@ -45,8 +45,8 @@ To get a **bleeding-edge version from source**, use these commands
 .. code:: sh
 
     repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
-    pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+    python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+    python3 -m pip install "https://github.com/$repo/archive/master.zip#egg=${repo#*/}"
 
 As a developer, to **create a working directory for this project**, call these commands:
 
@@ -54,8 +54,8 @@ As a developer, to **create a working directory for this project**, call these c
 
     git clone "{{ cookiecutter.github_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
-    command . .env --yes --develop  # add '--virtualenv /usr/bin/virtualenv' for Python2
-    invoke build check
+    command . .env --yes --develop
+    invoke build --docs test check
 
 You might also need to follow some
 `setup procedures <https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup>`_
