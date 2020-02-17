@@ -59,10 +59,8 @@ Development Status :: 3 - Alpha
 #Development Status :: 4 - Beta
 #Development Status :: 5 - Production/Stable
 Programming Language :: Python
-Programming Language :: Python :: 2
-Programming Language :: Python :: 2.7
 Programming Language :: Python :: 3
-Programming Language :: Python :: 3.4
+Programming Language :: Python :: 3.6
 Environment :: Console
 Intended Audience :: Developers
 Intended Audience :: Information Technology
@@ -95,6 +93,20 @@ with io.open(script_name, encoding='utf-8') as handle:
                          .format('|'.join(expected_keys)), line)
         if match:
             project[match.group(1)] = match.group(3)
+
+
+python_requires = (99, 0)
+for line in classifiers.splitlines():
+    if line.startswith('Programming Language :: Python :: '):
+        try:
+            major, minor = map(int, line.split('::')[-1].strip().split('.'))
+        except ValueError:
+            pass
+        else:
+            if python_requires > (major, minor):
+                python_requires = (major, minor)
+if python_requires < (99, 0):
+    project.setdefault('python_requires', '>={}.{}'.format(*python_requires))
 
 project.update(dict(
     description=__doc__.split('.')[0].split(' - ', 1)[1].strip(),

@@ -7,7 +7,7 @@
 # build matrix
 language: python
 python:
-    - "3.4"
+    - "3.6"
 #    - "pypy"
 
 # environment
