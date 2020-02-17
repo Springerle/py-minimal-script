@@ -11,6 +11,12 @@
 
 .. _setup-start:
 
+:Code:          {{ cookiecutter.github_url }}#readme
+:Docs:          https://{{ cookiecutter.repo_name }}.readthedocs.io/
+:CI:            https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+:Issues:        {{ cookiecutter.github_url }}/issues
+
+
 Introduction
 ------------
 
@@ -26,15 +32,25 @@ Usage
 Installation
 ------------
 
-*{{ cookiecutter.project_name }}* can be installed via ``pip install {{ cookiecutter.repo_name }}`` as usual,
-see `releases <{{ cookiecutter.github_url }}/releases>`_ for an overview of available versions.
-To get a bleeding-edge version from source, use these commands::
+*{{ cookiecutter.project_name }}* can be installed via
+``python3 -m pip install --user {{ cookiecutter.repo_name }}`` as usual,
+see `releases`_ for an overview of available versions.
+
+If you prefer an **isolated and easily removable venv installation**,
+consider using `dephell jail install {{ cookiecutter.repo_name }}`_ instead.
+
+To get a **bleeding-edge version from source**, use these commands
+(ideally within an activated virtualenv):
+
+.. code:: sh
 
     repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
     pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
     pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
 
-As a developer, to create a working directory for this project, call these commands::
+As a developer, to **create a working directory for this project**, call these commands:
+
+.. code:: sh
 
     git clone "{{ cookiecutter.github_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
@@ -45,6 +61,9 @@ You might also need to follow some
 `setup procedures <https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup>`_
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
+
+.. _releases: {{ cookiecutter.github_url }}/releases
+.. _`dephell jail install {{ cookiecutter.repo_name }}`: https://dephell.readthedocs.io/cmd-jail-install.html
 
 .. |Travis CI| image:: https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg
     :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
