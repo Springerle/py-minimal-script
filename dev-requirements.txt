@@ -2,20 +2,20 @@
 # Development and integration test requirements
 #
 
-invoke==1.2.0
-#rituals==0.3.0
--e git+https://github.com/jhermann/rituals.git#egg=rituals
+invoke==1.4.1
+rituals==0.4.1
+#https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 
-sphinx==1.8.2
+sphinx==2.4.1
 #-e git+git@github.com:jhermann/doc8.git@doc8-with-path#egg=doc8
 sphinx-autobuild==0.7.1
 
 #cookiecutter>=1.1
 -e git+https://github.com/jhermann/cookiecutter.git@enriched-context-for-hooks#egg=cookiecutter
-pytest==4.0.1
-pytest-spec==1.1.0
+pytest==4.6.9
+pytest-spec==2.0.0
 
-pylint==2.2.2
-bpython==0.17.1
+pylint==2.4.4
+bpython==0.18
 yolk3k==0.9
-pip-upgrader==1.4.6
+pip-upgrader==1.4.15
